@@ -58,6 +58,7 @@ documentation](http://www.datastax.com/documentation/cassandra/1.2/webhelp/cassa
 ## Core Attributes
 
  * `node[:cassandra][:cluster_name]` (default: none): Name of the cluster to create. This is required.
+ * 'node[:cassandra][:vnodes] : Equates to the attribute num_tokens within the yaml file.  If not defined then cassandra will default to 1.
  * `node[:cassandra][:version]` (default: a recent patch version): version to provision
  * `node[:cassandra][:tarball][:url]` and `node[:cassandra][:tarball][:md5]` specify tarball URL and MD5 check sum used by the `cassandra::tarball` recipe.
   * Setting `node[:cassandra][:tarball][:url]` to "auto" (default) will download the tarball of the specified version from the Apache repository.
